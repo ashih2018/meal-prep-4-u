@@ -6,8 +6,11 @@ def read_category(category, name):
     category = category.lower()
     name = name.lower()
     if os.path.exists('pantry.json'):
-        with open('pantry.json') as f:
-            data = json.load(f)
+        try:
+            with open('pantry.json') as f:
+                data = json.load(f)
+        except ValueError:
+            data = {}
     else:
         data = {}
 
