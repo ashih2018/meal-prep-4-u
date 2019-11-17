@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>MY PANTRY</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/default.css" type="text/css" />
+    <script src="scripts/pantry.js"></script>
+  </head>
+  <body>
+    <div class="wrapper row1">
+      <header id="header" class="clear">
+        <div id="hgroup">
+          <h1><a href="pantry.html">MY PANTRY</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipe.html">Recipe Search</a></li>
+            <li><a href="pantry.html">My Pantry</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!-- content -->
+    <div class="wrapper row2">
+      <div id="container" class="clear">
+        <section id="shout">
+          <h2>How It Works</h2>
+          <p>
+            Add ingredients you already have in your pantry, and when it's time
+            to search for a recipe, we will search using ingredients you already
+            have!
+          </p>
+        </section>
+        <!-- content body -->
+        <div id="content">
+          <!-- main content -->
+          <div id="include-ingredients">
+            <form>Add Ingredient:<br /></form>
+            <input type="text" name="include" id="include0" />
+          </div>
+          <button class="myButton" onclick="addPantryItem()">
+            Add to Pantry!
+          </button>
+        </div>
+
+        <div>
+          <h2>
+            Your Pantry Items:
+          </h2>
+        </div>
+        <!-- / content body -->
+      </div>
+    </div>
+  </body>
+</html>
