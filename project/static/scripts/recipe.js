@@ -1,56 +1,56 @@
-var includeId = 1;
-var excludeId = 1;
+let includeId = 1;
+let excludeId = 1;
 
 function checkCuisine() {
-  var checkbox = document.getElementById("cuisine");
-  var cuisines = document.getElementById("cuisines");
-  if (checkbox.checked == false) {
-    cuisines.style.display = "none";
-  } else {
-    cuisines.style.display = "inline-block";
-  }
+    let checkbox = document.getElementById("cuisine");
+    let cuisines = document.getElementById("cuisines");
+    if (checkbox.checked === false) {
+        cuisines.style.display = "none";
+    } else {
+        cuisines.style.display = "inline-block";
+    }
 }
 
 function generateIncludeRow() {
-  var d = document.getElementById("include-ingredients");
-  var node = document.createElement("INPUT");
-  node.setAttribute("style", "display:block; margin-top: 2%");
-  node.setAttribute("type", "text");
-  node.setAttribute("id", "include" + includeId);
-  d.appendChild(node);
-  includeId++;
+    let d = document.getElementById("include-ingredients");
+    let node = document.createElement("INPUT");
+    node.setAttribute("style", "display:block; margin-top: 2%");
+    node.setAttribute("type", "text");
+    node.setAttribute("id", "include" + includeId);
+    d.appendChild(node);
+    includeId++;
 }
 
 function getIncludeIngredients() {
-  ingredients = [];
-  for (var i = 0; i < includeId; i++) {
-    const id = "include" + i;
-    ing = document.getElementById(id);
-    ingredients.push(ing.value);
-  }
-  console.log("include: ", ingredients);
-  return ingredients;
+    let ingredients = [];
+    for (let i = 0; i < includeId; i++) {
+        const id = "include" + i;
+        let ing = document.getElementById(id);
+        ingredients.push(ing.value);
+    }
+    console.log("include: ", ingredients);
+    return ingredients;
 }
 
 function generateExcludeRow() {
-  var d = document.getElementById("exclude-ingredients");
-  var node = document.createElement("INPUT");
-  node.setAttribute("style", "display:block; margin-top: 2%");
-  node.setAttribute("type", "text");
-  node.setAttribute("id", "exclude" + excludeId);
-  d.appendChild(node);
-  excludeId++;
+    let d = document.getElementById("exclude-ingredients");
+    let node = document.createElement("INPUT");
+    node.setAttribute("style", "display:block; margin-top: 2%");
+    node.setAttribute("type", "text");
+    node.setAttribute("id", "exclude" + excludeId);
+    d.appendChild(node);
+    excludeId++;
 }
 
 function getExcludeIngredients() {
-  ingredients = [];
-  for (var i = 0; i < excludeId; i++) {
-    const id = "exclude" + i;
-    ing = document.getElementById(id);
-    ingredients.push(ing.value);
-  }
-  console.log("exclude: ", ingredients);
-  return ingredients;
+    let ingredients = [];
+    for (let i = 0; i < excludeId; i++) {
+        const id = "exclude" + i;
+        let ing = document.getElementById(id);
+        ingredients.push(ing.value);
+    }
+    console.log("exclude: ", ingredients);
+    return ingredients;
 }
 
 function getQuery() {
@@ -58,41 +58,25 @@ function getQuery() {
 }
 
 function processJsonResponse(data) {
-    console.log(data);
+    console.log(JSON.stringify(data));
+    data.forEach(recipe => console.log(recipe["title"]));
 }
 
 function clickHandler() {
-  const query = this.getQuery();
-  const included = this.getIncludeIngredients();
-  const excluded = this.getExcludeIngredients();
-  console.log(included);
-  console.log(excluded);
-  const postBody = {
-    "query": query,
-    "includeIngredients": included,
-    "excludeIngredients": excluded
-  };
+    const query = this.getQuery();
+    const included = this.getIncludeIngredients();
+    const excluded = this.getExcludeIngredients();
+    console.log(included);
+    console.log(excluded);
+    const postBody = {
+        "query": query,
+        "includeIngredients": included,
+        "excludeIngredients": excluded
+    };
 
-//  var xhr = new XMLHttpRequest();
-//    xhr.open("POST", 'http://127.0.0.1:5000/postmethod', true);
-//
-//    //Send the proper header information along with the request
-//    // xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-//
-//  xhr.onreadystatechange = function() { // Call a function when the state changes.
-//    if (this.readyState === XMLHttpRequest.DONE && this.status === 200) {
-//        console.log(Http.responseText);
-//    }
-//}
-//  xhr.send("query=j&includeIngredients=b,c&excludeIngredients=d,e");
-//
-
-// xhr.send(new Int8Array());
-// xhr.send(document);
-
-  $.post("http://127.0.0.1:5000/postmethod", JSON.stringify(postBody), function(data, status) {
-    processJsonResponse(JSON.parse(JSON.parse(data)[0]));
-  });
+    $.post("http://127.0.0.1:5000/postmethod", JSON.stringify(postBody), function(data, status) {
+        processJsonResponse(JSON.parse(data).map(recipe => JSON.parse(recipe)));
+    });
 
 
 //  post("http://localhost:5000/api/load", postBody)

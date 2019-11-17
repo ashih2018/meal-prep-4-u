@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
-    <title>Basic 81</title>
+    <title>Recipe Search</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../static/css/default.css" type="text/css" />
     <script src="../static/scripts/recipe.js"></script>
@@ -39,12 +39,12 @@
             <!-- main content -->
             <div id="query-container">
                 <form>
-                    Search for recipe keyword:<br />
+                    <label for="query">Search for recipe keyword:</label><br />
                     <input type="text" name="recipe" id="query" /><br />
                 </form>
             </div>
             <div id="include-ingredients">
-                <form>Include Ingredient(s):<br /></form>
+                <form><label for="include0">Include Ingredient(s):</label><br /></form>
                 <input type="text" name="include" id="include0" />
             </div>
             <button class="myButton" onclick="generateIncludeRow()">
@@ -52,7 +52,7 @@
             </button>
             <div id="exclude-ingredients">
                 <form>
-                    Exclude Ingredient(s):<br />
+                    <label for="exclude0">Exclude Ingredient(s):</label><br />
                     <input type="text" name="exclude" id="exclude0" />
                 </form>
             </div>
@@ -91,6 +91,8 @@
             <button class="myButton" id="find-recipes" onclick="clickHandler()">
                 Find Recipes!
             </button>
+        </div>
+        <div id="resultsContainer">
         </div>
         <!-- / content body -->
     </div>

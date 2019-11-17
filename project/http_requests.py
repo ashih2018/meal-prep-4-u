@@ -8,7 +8,6 @@ ADVANCED_SEARCH = "https://api.spoonacular.com/recipes/complexSearch"
 MEAL_PLAN = "https://api.spoonacular.com/recipes/mealplans/generate"
 RECIPES_BULK = "https://api.spoonacular.com/recipes/informationBulk"
 QUERIES_FILE = "queries.json"
-API_KEY = "91c872bcb84c442f8599092ea7b1affb"
 NUM_ENTRIES = 5
 RANKING = 2
 DEFAULT_CALORIES = 2000
@@ -86,14 +85,7 @@ def search_by_ingredients(ingredients, api_key, num_results=NUM_ENTRIES):
                   "number": num_results,
                   "ranking": RANKING}
     recipes_array = get_request(FIND_BY_INGREDIENTS, parameters, api_key)
-    recipe_ids_strings = list(map(lambda recipe: str(recipe["id"]), recipes_array))
-    recipe_ids_string = ",".join(recipe_ids_strings)
-
-    parameters = {"ids": recipe_ids_string,
-                  "includeNutrition": "true"}
-    full_recipes_list = get_request(RECIPES_BULK, parameters, api_key)
-    recipes_list = list(map(lambda recipe: Recipe(recipe), full_recipes_list))
-    return recipes_list
+    return get_full_recipes_list(recipes_array, lambda recipe: str(recipe["id"]), api_key)
 
 
 def search_advanced(query, cuisines, diet, intolerances, include_ingredients, exclude_ingredients, dish_type,
@@ -148,14 +140,7 @@ def search_advanced(query, cuisines, diet, intolerances, include_ingredients, ex
     parameters["number"] = num_results
 
     recipes_array = get_request(ADVANCED_SEARCH, parameters, api_key)["results"]
-    recipe_ids_strings = list(map(lambda recipe: str(recipe["id"]), recipes_array))
-    recipe_ids_string = ",".join(recipe_ids_strings)
-
-    parameters = {"ids": recipe_ids_string,
-                  "includeNutrition": "true"}
-    full_recipes_list = get_request(RECIPES_BULK, parameters, api_key)
-    recipes_list = list(map(lambda recipe: Recipe(recipe), full_recipes_list))
-    return recipes_list
+    return get_full_recipes_list(recipes_array, lambda recipe: str(recipe["id"]), api_key)
 
 
 def meal_plan(time_frame, calories, diet, exclude, api_key):
@@ -179,16 +164,23 @@ def meal_plan(time_frame, calories, diet, exclude, api_key):
     if exclude:
         parameters["exclude"] = ",".join(exclude)
     recipes_array = get_request(ADVANCED_SEARCH, parameters, api_key)["items"]
-    recipe_ids_strings = list(map(lambda recipe: str(json.loads(recipe["value"])["id"]), recipes_array))
+    return get_full_recipes_list(recipes_array, lambda recipe: str(json.loads(recipe["value"])["id"]), api_key)
 
+
+def get_full_recipes_list(recipes_list, recipe_to_id, api_key):
+    """
+    :param api_key: API key
+    :param recipes_list: List of recipes in a different format
+    :param recipe_to_id: function to convert a recipe in the input format to its ID
+    :return: a list of Recipe objects
+    """
+    recipe_ids_strings = list(map(recipe_to_id, recipes_list))
     recipe_ids_string = ",".join(recipe_ids_strings)
-
     parameters = {"ids": recipe_ids_string,
                   "includeNutrition": "true"}
     full_recipes_list = get_request(RECIPES_BULK, parameters, api_key)
-    recipes_list = list(map(lambda recipe: Recipe(recipe), full_recipes_list))
-    return recipes_list
+    return list(map(lambda recipe: Recipe(recipe), full_recipes_list))
 
 
 if __name__ == '__main__':
-    run(API_KEY)
+    run("")  # replace with API key
