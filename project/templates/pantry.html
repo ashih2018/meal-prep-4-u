@@ -3,8 +3,8 @@
   <head>
     <title>MY PANTRY</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles/default.css" type="text/css" />
-    <script src="scripts/pantry.js"></script>
+    <link rel="stylesheet" href="../static/css/default.css" type="text/css" />
+    <script src="../static/scripts/pantry.js"></script>
   </head>
   <body>
     <div class="wrapper row1">
@@ -14,10 +14,10 @@
         </div>
         <nav>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="recipe.html">Recipe Search</a></li>
-            <li><a href="pantry.html">My Pantry</a></li>
-            <li><a href="profile.html">Profile</a></li>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('recipe')}}">Recipe Search</a></li>
+            <li><a href="{{ url_for('pantry')}}">My Pantry</a></li>
+            <li><a href="{{ url_for('profile')}}">Profile</a></li>
           </ul>
         </nav>
       </header>
