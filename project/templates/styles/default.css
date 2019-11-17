@@ -94,6 +94,9 @@ code {
   width: 95%;
 }
 
+#cuisines > input {
+}
+
 img {
   margin: 0;
   padding: 0;
