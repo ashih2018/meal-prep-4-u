@@ -43,8 +43,11 @@
             style="margin-top:2%"
             type="file"
             name="filename"
+            id="filetag"
+            onchange="loadFile(event)"
             accept="image/gif, image/jpeg, image/png"
           />
+          <img id="output" width="200"/>
           <button class="myButton" id="addPantryItem">
             Add to Pantry!
           </button>
