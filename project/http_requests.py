@@ -18,21 +18,9 @@ def get_request(url, params, api_key):
     past_queries = []
     if past_queries_raw:
         past_queries = json.loads(past_queries_raw)
-
-        for query in past_queries:
-            print(query["arguments"]["url"], query["arguments"]["params"].items())
-            print(url, params.items())
-            print(query["arguments"]["url"] == url and query["arguments"]["params"].items() <= params.items())
-
-        matching_queries = list(filter(
-            lambda args_dict:
-                args_dict["arguments"]["url"] == url and args_dict["arguments"]["params"].items() <= params.items(),
-            past_queries))
-        print(matching_queries)
+        matching_queries = list(filter(matches_args(url, params), past_queries))
         if matching_queries:
-            print("There was a matching query: " + str(matching_queries[0]))
             return matching_queries[0]["result"]
-        raise Exception("help")
 
     print("Sending server request...")
     params["apiKey"] = api_key
@@ -48,7 +36,9 @@ def get_request(url, params, api_key):
 
 
 def matches_args(url, params):
-    return lambda args_dict: args_dict["url"] == url and args_dict["params"] == params
+    def query_matches_args(query):
+        return query["arguments"]["url"] == url and query["arguments"]["params"] == params
+    return query_matches_args
 
 
 def read_file(filename):
@@ -65,25 +55,25 @@ def write_file(filename, text):
 
 
 def run(api_key):
-    # recipes_json = read_file(RECIPES_FILE)
-    #
-    # if not recipes_json:
-
     parameters = {"ingredients": "onions,tomatoes,garlic,parsley,beef",
                   "number": 10,
                   "ranking": 2}
 
     recipes_array = get_request(FIND_BY_INGREDIENTS, parameters, api_key)
-    print(recipes_array)
     recipe_ids_strings = list(map(lambda recipe: str(recipe["id"]), recipes_array))
-    print(recipe_ids_strings)
     recipe_ids_string = ",".join(recipe_ids_strings)
-    print(recipe_ids_string)
 
     parameters = {"ids": recipe_ids_string,
                   "includeNutrition": "true"}
     full_recipes_list = get_request(RECIPES_BULK, parameters, api_key)
     print(full_recipes_list)
+
+
+class Recipe:
+    def __init__(self, full_recipe_json):
+        self.title = full_recipe_json["title"]
+        self.source_url = full_recipe_json["sourceUrl"]
+        self.image_url = full_recipe_json["image"]
 
 
 if __name__ == '__main__':
