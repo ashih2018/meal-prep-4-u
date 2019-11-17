@@ -1,0 +1,421 @@
+/*
+HTML 5 Template Name: Basic 81
+File: Layout CSS
+Author: OS Templates
+Author URI: https://www.os-templates.com/
+Licence: <a href="https://www.os-templates.com/template-terms">Website Template Licence</a>
+*/
+
+html {
+  overflow-y: scroll;
+} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #979797;
+  background-color: #ffffff;
+}
+
+.clear:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+.clear {
+  display: block;
+  clear: both;
+}
+html[xmlns] .clear {
+  display: block;
+}
+* html .clear {
+  height: 1%;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+code {
+  font-weight: normal;
+  font-style: normal;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.fl_left {
+  float: left;
+}
+.fl_right {
+  float: right;
+}
+
+.myButton {
+  margin: 2% 0 2% 0;
+  box-shadow: inset 0px 1px 0px 0px #ffffff;
+  background: linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  border: 1px solid #dcdcdc;
+  display: block;
+  cursor: pointer;
+  color: #666666;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+  background-color: #e9e9e9;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.cuisine {
+  display: inline-block;
+}
+
+.check-cuisine {
+  display: inline-block;
+}
+
+#cuisines {
+  width: 95%;
+}
+
+img {
+  margin: 0;
+  padding: 0;
+  border: none;
+  line-height: normal;
+  vertical-align: middle;
+}
+.imgholder,
+.imgl,
+.imgr {
+  padding: 4px;
+  border: 1px solid #d6d6d6;
+  text-align: center;
+}
+.imgl {
+  float: left;
+  margin: 0 15px 15px 0;
+  clear: left;
+}
+.imgr {
+  float: right;
+  margin: 0 0 15px 15px;
+  clear: right;
+}
+
+/*----------------------------------------------HTML 5 Overrides-------------------------------------*/
+
+address,
+article,
+aside,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+q {
+  display: block;
+  padding: 0 10px 8px 10px;
+  color: #979797;
+  background-color: #ececec;
+  font-style: italic;
+  line-height: normal;
+}
+q:before {
+  content: "“ ";
+  font-size: 26px;
+}
+q:after {
+  content: " „";
+  font-size: 26px;
+  line-height: 0;
+}
+
+/* ----------------------------------------------Wrapper-------------------------------------*/
+
+div.wrapper {
+  display: block;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+}
+
+.row1,
+.row1 a {
+  color: #979797;
+  background-color: #ffffff;
+}
+.row2 {
+  color: #979797;
+  background-color: #ffffff;
+}
+.row2 a {
+  color: #ff9900;
+  background-color: #ffffff;
+}
+.row3 {
+  border-top: 1px solid #dedede;
+}
+.row3,
+.row3 a {
+  color: #979797;
+  background-color: #ffffff;
+}
+
+/*----------------------------------------------Generalise-------------------------------------*/
+
+#header,
+#container,
+#footer {
+  display: block;
+  width: 960px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+address {
+  font-style: normal;
+}
+
+blockquote,
+q {
+  display: block;
+  padding: 8px 10px;
+  color: #979797;
+  background-color: #ececec;
+  font-style: italic;
+  line-height: normal;
+}
+blockquote:before,
+q:before {
+  content: "“ ";
+  font-size: 26px;
+}
+blockquote:after,
+q:after {
+  content: " „";
+  font-size: 26px;
+  line-height: 0;
+}
+
+.one_third,
+.two_third,
+.three_third {
+  display: block;
+  float: left;
+  margin: 0 30px 0 0;
+}
+.one_third {
+  width: 300px;
+}
+.two_third {
+  width: 630px;
+}
+.three_third {
+  width: 960px;
+  float: none;
+  margin-right: 0;
+  clear: both;
+}
+.lastbox {
+  margin-right: 0;
+}
+
+/*----------------------------------------------Header-------------------------------------*/
+
+#header {
+}
+
+#header #hgroup {
+  padding: 20px 0 0 0;
+  float: left;
+}
+#header #hgroup h1,
+#header #hgroup h2 {
+  font-weight: normal;
+  text-transform: none;
+}
+#header #hgroup h1 {
+  font-size: 36px;
+}
+#header #hgroup h2 {
+  font-size: 13px;
+}
+
+#header nav {
+  display: block;
+  float: right;
+  margin: 20px 0 0 0;
+  padding: 20px 0;
+}
+#header nav ul {
+}
+#header nav li {
+  display: inline;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+#header nav li.last {
+  margin-right: 0;
+}
+#header nav li a {
+}
+#header nav li a:hover {
+  color: #ff9900;
+  background-color: #ffffff;
+}
+
+/*----------------------------------------------Content Area-------------------------------------*/
+
+#container {
+  padding: 30px 0;
+}
+#container section {
+  display: block;
+  width: 100%;
+  margin: 0 0 30px 0;
+  padding: 0;
+}
+#container .last {
+  margin: 0;
+}
+#container .more {
+  text-align: right;
+}
+
+/* ------Slider-----*/
+
+#container #slider {
+}
+
+/* ------Shout-----*/
+
+#container #shout {
+  padding: 30px 0;
+  border-top: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  text-align: center;
+}
+#container #shout h1 {
+  font-size: 36px;
+  font-weight: normal;
+  font-style: italic;
+  text-transform: uppercase;
+}
+#container #shout p {
+  font-size: 16px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  line-height: 1.8em;
+}
+
+/* ------Main Content-----*/
+
+#container #content {
+  float: left;
+  width: 100%;
+  line-height: 1.6em;
+}
+#container #content #services {
+}
+#container #content #services article {
+}
+#container #content #services article h2 {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+#container #content #services article p {
+  margin: 0;
+  padding: 0;
+}
+#container #content #services article img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  margin: 0 10px 10px 0;
+  padding: 4px;
+  border: 1px solid #dedede;
+}
+#container #content #services article footer {
+  margin: 10px 0 0 0;
+}
+
+/* ------Right Column-----*/
+
+#container #right_column {
+  float: right;
+  width: 280px;
+}
+#container #right_column h2.title {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #dedede;
+}
+
+#container #right_column nav {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+}
+#container #right_column nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#container #right_column nav li {
+  margin: 0 0 3px 0;
+  padding: 0;
+}
+#container #right_column nav li.last {
+  margin-bottom: 0;
+}
+#container #right_column nav a {
+  display: block;
+  margin: 0;
+  padding: 5px 10px 5px 20px;
+  color: #666666;
+  background: url("../images/orange_file.gif") no-repeat 10px center #ffffff;
+  text-decoration: none;
+  border-bottom: 1px dotted #666666;
+}
+#container #right_column nav a:hover {
+  color: #ff9900;
+  background-color: #ffffff;
+}
+
+/*----------------------------------------------Footer-------------------------------------*/
+
+#footer {
+  padding: 20px 0;
+}
+#footer p {
+  margin: 0;
+  padding: 0;
+}

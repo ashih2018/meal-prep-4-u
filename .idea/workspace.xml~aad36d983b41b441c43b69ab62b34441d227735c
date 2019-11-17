@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a22b55ae-519e-4666-be36-bda985a102da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/project/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/black_file.gif" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/black_file.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/demo/80x80.gif" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/demo/80x80.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/demo/960x360.gif" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/demo/960x360.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/demo/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/demo/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/demo/mealprep.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/demo/mealprep.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/dietary.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/dietary.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/healthycooking.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/healthycooking.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/mealprep.png" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/mealprep.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/images/orange_file.gif" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/images/orange_file.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/pantry.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/templates/pantry.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/templates/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/recipe.html" beforeDir="false" afterPath="$PROJECT_DIR$/project/templates/recipe.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/scripts/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/scripts/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/scripts/pantry.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/scripts/pantry.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/scripts/recipe.js" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/scripts/recipe.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/styles/default.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/css/default.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/styles/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/templates/styles/layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/project/static/css/layout.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/app.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/hello.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="19" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/profile.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/recipe.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/project/templates/licence.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/project/templates/pantry.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/project/app.py" />
+        <option value="$PROJECT_DIR$/project/templates/index.html" />
+        <option value="$PROJECT_DIR$/project/templates/profile.html" />
+        <option value="$PROJECT_DIR$/project/templates/recipe.html" />
+        <option value="$PROJECT_DIR$/project/templates/pantry.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-184" />
+    <option name="y" value="-34" />
+    <option name="width" value="1940" />
+    <option name="height" value="1060" />
+  </component>
+  <component name="ProjectId" id="1Tjp1jjpQVMkItMEHa7oV8WYQqg" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="boston-hacks-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boston-hacks-2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boston-hacks-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boston-hacks-2" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boston-hacks-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boston-hacks-2" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boston-hacks-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boston-hacks-2" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="boston-hacks-2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="boston-hacks-2" type="462c0819:PsiDirectoryNode" />
+              <item name="project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\alexa\git-projects\boston-hacks-2\project\static" />
+      <recent name="C:\Users\alexa\git-projects\boston-hacks-2\project\static\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="boston-hacks-2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="pantry_vision" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="boston-hacks-2" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/project/pantry_vision.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.app" />
+      <item itemvalue="Python.pantry_vision" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+        <item itemvalue="Python.pantry_vision" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a22b55ae-519e-4666-be36-bda985a102da" name="Default Changelist" comment="" />
+      <created>1573964795265</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1573964795265</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1653" height="896" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24984306" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32984293" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="SonarLint" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Key Promoter X" order="3" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/flask/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/styles/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/scripts/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/licence.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/app.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/hello.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="16" column="12" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="19" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/recipe.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/project/templates/pantry.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
