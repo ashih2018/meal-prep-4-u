@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import os
 import requests
 from pantry import read_category
+=======
+import io
+import os
+import requests
+>>>>>>> b2f6fb2f4ed32aaa6724480d08e74d83257e045a
 
 # Imports the Google Cloud client library
 from google.cloud import vision
@@ -11,7 +17,8 @@ def pantry_vision():
     credentials = service_account.Credentials.from_service_account_file(
         "C:\\Users\\Stella\\Documents\\BostonHacks-56a57960ca1e.json")
 
-    API_KEY = "89cc44a62bab4f498f7afb7257f799dc"
+    API_KEY = "fa7c3e4e3bf74b55b573701f96e6c8cb"
+
 
     # defining the api-endpoint
     BASE_URL = "https://api.spoonacular.com/recipes/parseIngredients?apiKey=" + API_KEY
