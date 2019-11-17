@@ -43,9 +43,7 @@ def get_request(url, params, api_key):
 
 
 def matches_args(url, params):
-    def query_matches_args(query):
-        return query["arguments"]["url"] == url and query["arguments"]["params"] == params
-    return query_matches_args
+    return lambda query: query["arguments"]["url"] == url and query["arguments"]["params"] == params
 
 
 def read_file(filename):
