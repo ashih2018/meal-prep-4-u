@@ -74,6 +74,11 @@ class Recipe:
         self.title = full_recipe_json["title"]
         self.source_url = full_recipe_json["sourceUrl"]
         self.image_url = full_recipe_json["image"]
+        self.required_time = full_recipe_json["readyInMinutes"]
+        self.ext_ingredients = full_recipe_json["extendedIngredients"]
+        self.servings = full_recipe_json["servings"]
+        self.nutrition = full_recipe_json["nutrition"]
+
 
 
 if __name__ == '__main__':
