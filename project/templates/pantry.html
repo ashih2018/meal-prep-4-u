@@ -34,19 +34,24 @@
           </p>
         </section>
         <!-- content body -->
-        <div id="content">
-          <!-- main content -->
+        <div id="content" style="border-bottom: 1px solid #dedede;">
           <div id="include-ingredients">
             <form>Add Ingredient:<br /></form>
             <input type="text" name="include" id="include0" />
           </div>
+          <input
+            style="margin-top:2%"
+            type="file"
+            name="filename"
+            accept="image/gif, image/jpeg, image/png"
+          />
           <button class="myButton" onclick="addPantryItem()">
             Add to Pantry!
           </button>
         </div>
 
         <div>
-          <h2>
+          <h2 style="margin-top: 2%;">
             Your Pantry Items:
           </h2>
         </div>
