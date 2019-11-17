@@ -35,3 +35,24 @@ def read_category(name):
 
     with open('pantry.json', 'w') as outfile:
         json.dump(food, outfile)
+
+
+def read_pantry():
+    if os.path.exists('pantry.json'):
+        try:
+            with open('pantry.json') as f:
+                food = json.load(f)
+        except ValueError:
+            food = {}
+    else:
+        food = {}
+
+    lst = []
+    for category in food:
+        for item in food[category]:
+            lst.append(item)
+    print(lst)
+
+
+if __name__ == '__main__':
+    read_pantry()
