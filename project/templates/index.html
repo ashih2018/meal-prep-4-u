@@ -1,17 +1,62 @@
 <!DOCTYPE html>
-<html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <title>Flask React</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- styles -->
+<html lang="en" dir="ltr">
+  <head>
+    <title>Basic 81</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
+    <script src="scripts/html5shiv.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Flask React!!!! yeet</h1>
-      <br>
-      <div id="content"></div>
+    <div class="wrapper row1">
+      <header id="header" class="clear">
+        <div id="hgroup">
+          <h1><a href="#">Basic 81</a></h1>
+          <h2>Free HTML5 Website Template</h2>
+        </div>
+        <div class="tab">
+          <button class="tablinks" onclick="openCity(event, 'London')">
+            Find Recipes
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Paris')">
+            Paris
+          </button>
+          <button class="tablinks" onclick="openCity(event, 'Tokyo')">
+            Tokyo
+          </button>
+        </div>
+      </header>
     </div>
-    <!-- scripts -->
+    <!-- content -->
+    <div class="wrapper row2">
+      <div id="container" class="clear">
+        <section id="slider">
+          <a href="#"><img src="images/demo/960x360.gif" alt=""/></a>
+        </section>
+        <section id="shout">
+          <h1>Lorum ipsum dolor</h1>
+          <p>
+            Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean
+            elit intesque sed. Facilispede estibulum nulla orna nisl velit elit
+            ac aliquat non tincidunt. Namjusto cras urna urnaretra lor urna
+            neque sed quis orci nulla laoremut vitae doloreet condimentumst.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <div id="London" class="tabcontent">
+      <h3>London</h3>
+      <p>London is the capital city of England.</p>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+      <h3>Paris</h3>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div id="Tokyo" class="tabcontent">
+      <h3>Tokyo</h3>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
   </body>
 </html>
