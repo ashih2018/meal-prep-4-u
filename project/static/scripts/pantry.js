@@ -1,3 +1,5 @@
 function addPantryItem() {
-  // submit post request to save to pantry
+  var a = document.getElementById("include0");
+  var pantry = document.getElementById("pantry-items");
+  pantry.innerHTML += a.value + "<br >";
 }

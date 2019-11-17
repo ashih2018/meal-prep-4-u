@@ -45,7 +45,7 @@
             name="filename"
             accept="image/gif, image/jpeg, image/png"
           />
-          <button class="myButton" onclick="addPantryItem()">
+          <button class="myButton" id="addPantryItem">
             Add to Pantry!
           </button>
         </div>
@@ -54,9 +54,15 @@
           <h2 style="margin-top: 2%;">
             Your Pantry Items:
           </h2>
+          <div id="pantry-items"></div>
         </div>
-        <!-- / content body -->
       </div>
     </div>
   </body>
+
+  <script>
+    document
+      .getElementById("addPantryItem")
+      .addEventListener("click", addPantryItem);
+  </script>
 </html>
