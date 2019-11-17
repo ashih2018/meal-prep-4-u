@@ -29,6 +29,12 @@ def pantry():
 def profile():
     return render_template('profile.html')
 
+@app.route('/pantrymethod', methods=['POST'])
+def get_pantry_data():
+    with open('pantry.json') as f:
+      data = json.load(f)
+    return json.dumps(data)
+
 
 @app.route('/postmethod', methods=['POST'])
 def get_post_javascript_data():
@@ -45,7 +51,6 @@ def get_post_javascript_data():
     print("finished")
     print(json.dumps(json_recipes))
     return json.dumps(json_recipes)
-    # return "Hello"
 
 
 def run():

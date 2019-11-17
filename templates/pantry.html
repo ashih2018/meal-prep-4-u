@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../static/css/default.css" type="text/css" />
     <script src="../static/scripts/pantry.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="wrapper row1">
@@ -34,10 +35,14 @@
         <!-- content body -->
         <div id="content" style="border-bottom: 1px solid #dedede;">
           <div id="include-ingredients">
-              <form><label for="include0">Add Ingredient:</label><br /></form>
+            <form><label for="include0">Add Ingredient:</label><br /></form>
             <input type="text" name="include" id="include0" />
           </div>
+          <button class="myButton addPantryItem" id="addPantryItem">
+            Add to Pantry!
+          </button>
           <input
+            id="image-loader"
             style="margin-top:2%"
             type="file"
             name="filename"
@@ -45,8 +50,8 @@
             onchange="loadFile(event)"
             accept="image/gif, image/jpeg, image/png"
           />
-          <img id="output" width="200"/>
-          <button class="myButton" id="addPantryItem">
+          <img id="output" width="200" />
+          <button class="myButton" id="loadImage">
             Add to Pantry!
           </button>
         </div>
@@ -65,5 +70,8 @@
     document
       .getElementById("addPantryItem")
       .addEventListener("click", addPantryItem);
+    document
+      .getElementById("loadImage")
+      .addEventListener("click", onLoad);
   </script>
 </html>
