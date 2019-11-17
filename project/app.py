@@ -29,8 +29,7 @@ def hello():
 
 @app.route("/api/load", methods=['POST'])
 def get_recipes(ingredients):
-
-
+    return 0
 
 if __name__ == '__main__':
     app.run(debug=False)
