@@ -1,12 +1,6 @@
-<<<<<<< HEAD
 import os
 import requests
 from pantry import read_category
-=======
-import io
-import os
-import requests
->>>>>>> b2f6fb2f4ed32aaa6724480d08e74d83257e045a
 
 # Imports the Google Cloud client library
 from google.cloud import vision
