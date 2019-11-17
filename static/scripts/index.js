@@ -12,8 +12,6 @@ function currentSlide(n) {
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("mySlides");
-    console.log(slides);
-    console.log("we made it here somehow?");
     let dots = document.getElementsByClassName("dot");
     let slidesText = document.getElementsByClassName("slidesText");
     if (n > slides.length) {

@@ -30,6 +30,7 @@ def get_request(url, params, api_key):
 
     print("Sending server request...")
     params["apiKey"] = api_key
+    print(url, params)
     response = requests.get(url=url, params=params)
     if response.status_code == 400 or response.status_code == 401:
         raise Exception("Received server error")

@@ -1,5 +1,4 @@
 import json
-
 from flask import Flask, render_template, request
 from project.http_requests import search_advanced
 
@@ -49,5 +48,9 @@ def get_post_javascript_data():
     # return "Hello"
 
 
-if __name__ == '__main__':
+def run():
     app.run(debug=False)
+
+
+if __name__ == '__main__':
+    run()
