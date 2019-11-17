@@ -56,6 +56,7 @@ function getExcludeIngredients() {
 function clickHandler() {
   const included = this.getIncludeIngredients();
   const excluded = this.getExcludeIngredients();
+  const 
   const postBody = {
     included,
     excluded
