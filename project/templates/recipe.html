@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Basic 81</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/css/default.css" type="text/css" />
+    <script src="../static/scripts/recipe.js"></script>
+  </head>
+  <body>
+    <div class="wrapper row1">
+      <header id="header" class="clear">
+        <div id="hgroup">
+          <h1><a href="#">RECIPE SEARCH</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('recipe')}}">Recipe Search</a></li>
+            <li><a href="{{ url_for('pantry')}}">My Pantry</a></li>
+            <li><a href="{{ url_for('profile')}}">Profile</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <!-- content -->
+    <div class="wrapper row2">
+      <div id="container" class="clear">
+        <section id="shout">
+          <h2>How It Works</h2>
+          <p>
+            Search for a recipe based on your dietary preferences that you entered in your profile as well
+            as what types of food you are in the mood for today, which you can enter down below!
+          </p>
+        </section>
+        <!-- content body -->
+        <div id="content">
+          <!-- main content -->
+          <div id="query">
+            <form>
+              Search for recipe keyword:<br />
+              <input type="text" name="recipe" /><br />
+            </form>
+          </div>
+          <div id="include-ingredients">
+            <form>
+              Include Ingredient(s):<br />
+            </form>
+            <input type="text" name="include" id="include0" />
+          </div>
+          <button class="myButton" onclick="generateIncludeRow()">
+            Add Ingredient
+          </button>
+          <div id="exclude-ingredients">
+            <form>
+              Exclude Ingredient(s):<br />
+              <input type="text" name="exclude" id="exclude0" />
+            </form>
+          </div>
+          <button class="myButton" onclick="generateExcludeRow()">
+            Add Ingredient
+          </button>
+          <div> Cuisine Type </div>
+          <div id="cuisines">
+            <input type="checkbox" value="African"> African </input>
+            <input type="checkbox" value="American" > American</input>
+            <input type="checkbox" value="British" > British</input> <br />
+            <input type="checkbox" value="Cajun" > Cajun</input>
+            <input type="checkbox" value="Caribbean" > Caribbean</input>
+            <input type="checkbox" value="Chinese" > Chinese</input> <br />
+            <input type="checkbox" value="Eastern" > Eastern</input>
+            <input type="checkbox" value="European" > European</input>
+            <input type="checkbox" value="French" > French</input> <br />
+            <input type="checkbox" value="German" > German</input>
+            <input type="checkbox" value="Greek" > Greek</input>
+            <input type="checkbox" value="Indian" > Indian</input> <br />
+            <input type="checkbox" value="Irish" > Irish</input>
+            <input type="checkbox" value="Italian" > Italian</input>
+            <input type="checkbox" value="Japanese" > Japanese</input> <br />
+            <input type="checkbox" value="Jewish" > Jewish</input>
+            <input type="checkbox" value="Korean" > Korean</input>
+            <input type="checkbox" value="Latin American" > Latin American</input> <br />
+            <input type="checkbox" value="Mediterranean" > Mediterranean</input>
+            <input type="checkbox" value="Mexican" > Mexican</input>
+            <input type="checkbox" value="Middle Eastern" > Middle Eastern</input> <br />
+            <input type="checkbox" value="Nordic" > Nordic</input>
+            <input type="checkbox" value="Southern" > Southern</input>
+            <input type="checkbox" value="Spanish" > Spanish</input> </br>
+            <input type="checkbox" value="Thai" > Thai</input>
+            <input type="checkbox" value="Vietnamese" > Vietnamese</input>
+          </div>
+          <button class="myButton" id="find-recipes" onclick="clickHandler()">
+            Find Recipes!
+          </button>
+        </div>
+        <!-- / content body -->
+      </div>
+    </div>
+  </body>
+</html>

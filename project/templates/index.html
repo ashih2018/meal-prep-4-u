@@ -1,17 +1,101 @@
 <!DOCTYPE html>
-<html>
-  <head lang="en">
-    <meta charset="UTF-8">
-    <title>Flask React</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- styles -->
+<html lang="en" dir="ltr">
+  <head>
+    <title>Meal Prep For You</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="../static/css/layout.css" type="text/css" />
+    <script src="../static/scripts/index.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Flask React!!!! yeet</h1>
-      <br>
-      <div id="content"></div>
+    <div class="wrapper row1">
+      <header id="header" class="clear">
+        <div id="hgroup">
+          <h1><a href="index.html">MEAL PREP 4 U</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
+            <li><a href="{{ url_for('recipe')}}">Recipe Search</a></li>
+            <li><a href="{{ url_for('pantry')}}">My Pantry</a></li>
+            <li><a href="{{ url_for('profile')}}">Profile</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="../static/images/mealprep.png" style="width:960px; height:540px" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img
+            src="../static/images/healthycooking.jpg"
+            style="width:960px; height:540px"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="../static/images/dietary.jpg" style="width:960px; height:540px" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div style="text-align:center; margin: 1%">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
-    <!-- scripts -->
+    <!-- content -->
+
+    <div class="wrapper row2">
+      <div id="container" class="clear">
+        <section id="shout" class="slidesText">
+          <h1>Prep for Success</h1>
+          <div class="desc">
+            There are twice as many fast foods are there were in 1970. Without
+            proper meal prep, you are more likely to eat fast food.
+          </div>
+          <br />
+          <div class="desc">
+            By meal prepping, you can easily control the portions of the meals
+            that you eat, as well as saving you time and money.
+          </div>
+        </section>
+        <section id="shout" class="slidesText">
+          <h1>Healthy Cooking is Essential</h1>
+          <div class="desc">
+            Adult obesity rates exceed 30% in 31 states as of September 2019.
+          </div>
+          <br />
+          <div class="desc">
+            90 percent of Americans take in more sodium than health experts
+            recommend for a healthy diet.
+          </div>
+        </section>
+        <section id="shout" class="slidesText">
+          <h1>Address Your Dietary Needs</h1>
+          <div class="desc">
+            Tailor your meal plans with calorie counts, macronutrient tracking,
+            and allergy restrictions.
+          </div>
+          <br />
+          <div class="desc">
+            By meal prepping, you control what ingredients go into the foods
+            that you are eating.
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+    </script>
   </body>
 </html>
