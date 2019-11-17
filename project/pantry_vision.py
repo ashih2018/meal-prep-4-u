@@ -1,6 +1,6 @@
-import io
 import os
 import requests
+from pantry import read_category
 
 # Imports the Google Cloud client library
 from google.cloud import vision
@@ -11,7 +11,7 @@ def pantry_vision():
     credentials = service_account.Credentials.from_service_account_file(
         "C:\\Users\\Stella\\Documents\\BostonHacks-56a57960ca1e.json")
 
-    API_KEY = "fa7c3e4e3bf74b55b573701f96e6c8cb"
+    API_KEY = "89cc44a62bab4f498f7afb7257f799dc"
 
     # defining the api-endpoint
     BASE_URL = "https://api.spoonacular.com/recipes/parseIngredients?apiKey=" + API_KEY
@@ -32,33 +32,15 @@ def pantry_vision():
     objects = client.object_localization(
         image=image).localized_object_annotations
 
-    for object in objects:
-        data = {'ingredientList': object,
+    for object_ in objects:
+        print("name " + str(object_.name))
+        data = {'ingredientList': "broccoli",
                 'servings': 0,
                 'includeNutrition': False}
         r = requests.post(url=BASE_URL, data=data)
-        Pantry.
+        if "aisle" in r.json()[0]:
+            read_category(r.json()[0]["aisle"], str(object_.name))
 
-
-        # sending post request and saving response as response object
-        r = requests.post(url=BASE_URL, data=data)
-    #     print(object_.name)
-    # your API key here
-    API_KEY = "fa7c3e4e3bf74b55b573701f96e6c8cb"
-
-    # defining the api-endpoint
-    BASE_URL = "https://api.spoonacular.com/recipes/parseIngredients?apiKey=" + API_KEY
-
-
-
-    # data to be sent to api
-    data = {'ingredientList': 'broccoli',
-            'servings': 2,
-            'includeNutrition': False}
-
-    # sending post request and saving response as response object
-    r = requests.post(url=BASE_URL, data=data)
-    print("the response text is '" + r.json()[0]["aisle"] + "'")
 
 if __name__ == '__main__':
     pantry_vision()
