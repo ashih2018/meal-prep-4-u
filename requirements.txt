@@ -1,4 +1,0 @@
-beautifulsoup4
-twilio
-Flask==1.1.1
-
