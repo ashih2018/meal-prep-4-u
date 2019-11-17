@@ -1,5 +1,3 @@
-/*! HTML5 Shiv vpre3.6 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -38,20 +36,6 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
   slidesText[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " active";
-}
-
-function openCity(evt, cityName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
 }
 
 (function(window, document) {
