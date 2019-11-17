@@ -27,6 +27,10 @@ def index():
 def hello():
     return render_template('hello.html')
 
+@app.route("/api/load", methods=['POST'])
+def get_recipes(ingredients):
+
+
 
 if __name__ == '__main__':
     app.run(debug=False)

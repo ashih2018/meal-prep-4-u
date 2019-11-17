@@ -38,14 +38,14 @@
           <div id="query">
             <form>
               Search for recipe keyword:<br />
-              <input type="text" name="firstname" /><br />
+              <input type="text" name="recipe" /><br />
             </form>
           </div>
           <div id="include-ingredients">
             <form>
               Include Ingredient(s):<br />
-              <input type="text" name="firstname" /><br />
             </form>
+            <input type="text" name="include" id="include0" />
           </div>
           <button class="myButton" onclick="generateIncludeRow()">
             Add Ingredient
@@ -53,7 +53,7 @@
           <div id="exclude-ingredients">
             <form>
               Exclude Ingredient(s):<br />
-              <input type="text" name="firstname" /><br />
+              <input type="text" name="exclude" id="exclude0" />
             </form>
           </div>
           <button class="myButton" onclick="generateExcludeRow()">
@@ -95,7 +95,7 @@
             <input type="checkbox" value="Thai" > Thai</input>
             <input type="checkbox" value="Vietnamese" > Vietnamese</input>
           </div>
-          <button class="myButton">
+          <button class="myButton" id="find-recipes" onclick="clickHandler()">
             Find Recipes!
           </button>
         </div>
