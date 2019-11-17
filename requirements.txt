@@ -1,4 +1,5 @@
 requests
 google
-Flask==1.1.1
-
+Flask>=1.1.1
+google-cloud>=0.34.0
+google-oauth>=1.0.1

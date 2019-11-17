@@ -1,89 +1,92 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
+<head>
     <title>Basic 81</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="../static/css/default.css" type="text/css" />
     <!--[if lt IE 9]><script src="../static/scripts/html5shiv.js"></script><![endif]-->
-  </head>
-  <body>
-    <div class="wrapper row1">
-      <header id="header" class="clear">
+</head>
+<body>
+<div class="wrapper row1">
+    <header id="header" class="clear">
         <div id="hgroup">
-          <h1><a href="#">PROFILE</a></h1>
+            <h1><a href="#">PROFILE</a></h1>
         </div>
         <nav>
-          <ul>
-            <li><a href="{{ url_for('home')}}">Home</a></li>
-            <li><a href="{{ url_for('recipe')}}">Recipe Search</a></li>
-            <li><a href="{{ url_for('pantry')}}">My Pantry</a></li>
-            <li><a href="{{ url_for('profile')}}">Profile</a></li>
-          </ul>
+            <ul>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="{{ url_for('recipe')}}">Recipe Search</a></li>
+                <li><a href="{{ url_for('pantry')}}">My Pantry</a></li>
+                <li><a href="{{ url_for('profile')}}">Profile</a></li>
+            </ul>
         </nav>
-      </header>
-    </div>
-    <!-- content -->
-    <div class="wrapper row2">
-      <div id="container" class="clear">
+    </header>
+</div>
+<!-- content -->
+<div class="wrapper row2">
+    <div id="container" class="clear">
         <section id="shout">
-          <h2>How It Works</h2>
-          <p>
-            Here, you will be able to change and set information and preferences such as daily nutritional intake, dietary restrictions, preferred calories, and much more.
-          </p>
+            <h2>How It Works</h2>
+            <p>
+                Here, you will be able to change and set information and preferences such as daily nutritional intake, dietary restrictions, preferred calories, and much more.
+            </p>
         </section>
         <!-- content body -->
         <div id="content">
-          <h3>Daily nutritional intake</h3>
-          <!-- main content -->
-          <div id="calories">
-            <form>
-              Calories (1500 - 3000):<br />
-              <input type="number" min="1500" max="3000" /><br />
-            </form>
-          </div>
-          <div id="protein">
-            <form>
-              Protein (35g - 70g):<br />
-              <input type="number" min="35" max="70" /><br />
-            </form>
-          </div
-          <div id="carbs">
-            <form>
-              Carbs (50g - 400g):<br />
-              <input type="number" min="50" max="400" /><br />
-            </form>
-          </div>
-          <div id="fat">
-            <form>
-              Fat (44g - 77g):<br />
-              <input type="number" min="44" max="77" /><br />
-            </form>
-          </div>
-          <h3>Diet</h3>
-          <div id="diet">
-            <form>
-              <input type="radio" name="diet" value="yes">Yes</input>
-              <input type="radio" name="diet" value="no">No</input>
-            </form>
-          <h3>Food Intolerances</h3>
-          <div id="intolerance">
-            <input type="checkbox" value="Dairy"> Dairy</input>
-            <input type="checkbox" value="Gluten" > Gluten</input>
-            <input type="checkbox" value="Egg" > Egg</input><br>
-            <input type="checkbox" value="Grain" > Grain</input>
-            <input type="checkbox" value="Peanut" > Peanut</input>
-            <input type="checkbox" value="Seafood" > Seafood</input><br>
-            <input type="checkbox" value="Sesame" > Sesame</input>
-            <input type="checkbox" value="Shellfish" > Shellfish</input>
-            <input type="checkbox" value="Soy" > Soy</input><br>
-            <input type="checkbox" value="Sulfite" > Sulfite</input>
-            <input type="checkbox" value="Tree Nut" > Tree Nut</input>
-            <input type="checkbox" value="Wheat" > Wheat</input><br>
-          </div>
-          <button class="myButton">
-            Save Preferences!
-          </button>
+            <h3>Daily nutritional intake</h3>
+            <!-- main content -->
+            <div id="calories">
+                <form>
+                    Calories (1500 - 3000):<br />
+                    <input type="number" min="1500" max="3000" /><br />
+                </form>
+            </div>
+            <div id="protein">
+                <form>
+                    Protein (35g - 70g):<br />
+                    <input type="number" min="35" max="70" /><br />
+                </form>
+            </div>
+            <div id="carbs">
+                <form>
+                    Carbs (50g - 400g):<br />
+                    <input type="number" min="50" max="400" /><br />
+                </form>
+            </div>
+            <div id="fat">
+                <form>
+                    Fat (44g - 77g):<br />
+                    <input type="number" min="44" max="77" /><br />
+                </form>
+            </div>
+            <h3>Diet</h3>
+            <div id="diet">
+                <form>
+                    <input type="radio" name="diet" value="yes" />Yes
+                    <input type="radio" name="diet" value="no" />No
+                </form>
+                <h3>Food Intolerances</h3>
+                <div id="intolerance">
+                    <input type="checkbox" value="Dairy"> Dairy
+                    <input type="checkbox" value="Gluten"> Gluten
+                    <input type="checkbox" value="Egg"> Egg<br>
+                    <input type="checkbox" value="Grain"> Grain
+                    <input type="checkbox" value="Peanut"> Peanut
+                    <input type="checkbox" value="Seafood"> Seafood<br>
+                    <input type="checkbox" value="Sesame"> Sesame
+                    <input type="checkbox" value="Shellfish"> Shellfish
+                    <input type="checkbox" value="Soy"> Soy<br>
+                    <input type="checkbox" value="Sulfite"> Sulfite
+                    <input type="checkbox" value="Tree Nut"> Tree Nut
+                    <input type="checkbox" value="Wheat"> Wheat<br>
+                </div>
+                <button class="myButton">
+                    Save Preferences!
+                </button>
+            </div>
         </div>
         <!-- / content body -->
-  </body>
+    </div>
+</div>
+</body>
 </html>

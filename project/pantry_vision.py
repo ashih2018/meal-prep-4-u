@@ -5,7 +5,7 @@ import requests
 from google.cloud import vision
 from google.oauth2 import service_account
 
-from pantry import read_category
+from project.pantry import read_category
 
 
 def pantry_vision():
