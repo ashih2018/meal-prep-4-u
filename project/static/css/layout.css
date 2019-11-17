@@ -179,6 +179,10 @@ q:after {
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
+#logo {
+  max-width: 250px;
+}
+
 div.wrapper {
   display: block;
   width: 960px;
