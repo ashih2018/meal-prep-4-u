@@ -60,6 +60,10 @@ function clickHandler() {
     included,
     excluded
   };
+  $.post("/postmethod", {
+    javascript_data: data
+  });
+
 
   post("http://localhost:5000/api/load", postBody)
     .then(response => response.json())
