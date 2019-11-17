@@ -1,4 +1,4 @@
-var slideIndex = 1;
+let slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
@@ -10,10 +10,12 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  var slidesText = document.getElementsByClassName("slidesText");
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  console.log(slides);
+  console.log("we made it here somehow?");
+  let dots = document.getElementsByClassName("dot");
+  let slidesText = document.getElementsByClassName("slidesText");
   if (n > slides.length) {
     slideIndex = 1;
   }
@@ -40,31 +42,31 @@ function showSlides(n) {
 
 (function(window, document) {
   /** Preset options */
-  var options = window.html5 || {};
+  let options = window.html5 || {};
 
   /** Used to skip problem elements */
-  var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
+  let reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
 
   /** Not all elements can be cloned in IE (this list can be shortend) **/
-  var saveClones = /^<|^(?:a|b|button|code|div|fieldset|form|h1|h2|h3|h4|h5|h6|i|iframe|img|input|label|li|link|ol|option|p|param|q|script|select|span|strong|style|table|tbody|td|textarea|tfoot|th|thead|tr|ul)$/i;
+  let saveClones = /^<|^(?:a|b|button|code|div|fieldset|form|h1|h2|h3|h4|h5|h6|i|iframe|img|input|label|li|link|ol|option|p|param|q|script|select|span|strong|style|table|tbody|td|textarea|tfoot|th|thead|tr|ul)$/i;
 
   /** Detect whether the browser supports default html5 styles */
-  var supportsHtml5Styles;
+  let supportsHtml5Styles;
 
   /** Name of the expando, to work with multiple documents or to re-shiv one document */
-  var expando = "_html5shiv";
+  let expando = "_html5shiv";
 
   /** The id for the the documents expando */
-  var expanID = 0;
+  let expanID = 0;
 
   /** Cached data for each document */
-  var expandoData = {};
+  let expandoData = {};
 
   /** Detect whether the browser supports unknown elements */
-  var supportsUnknownElements;
+  let supportsUnknownElements;
 
   (function() {
-    var a = document.createElement("a");
+    let a = document.createElement("a");
 
     a.innerHTML = "<xyz></xyz>";
 
@@ -80,7 +82,7 @@ function showSlides(n) {
         } catch (e) {
           return true;
         }
-        var frag = document.createDocumentFragment();
+        let frag = document.createDocumentFragment();
         return (
           typeof frag.cloneNode == "undefined" ||
           typeof frag.createDocumentFragment == "undefined" ||
@@ -99,7 +101,7 @@ function showSlides(n) {
    * @returns {StyleSheet} The style element.
    */
   function addStyleSheet(ownerDocument, cssText) {
-    var p = ownerDocument.createElement("p"),
+    let p = ownerDocument.createElement("p"),
       parent =
         ownerDocument.getElementsByTagName("head")[0] ||
         ownerDocument.documentElement;
@@ -114,7 +116,7 @@ function showSlides(n) {
    * @returns {Array} An array of shived element node names.
    */
   function getElements() {
-    var elements = html5.elements;
+    let elements = html5.elements;
     return typeof elements == "string" ? elements.split(" ") : elements;
   }
 
@@ -125,7 +127,7 @@ function showSlides(n) {
    * @returns {Object} An object of data.
    */
   function getExpandoData(ownerDocument) {
-    var data = expandoData[ownerDocument[expando]];
+    let data = expandoData[ownerDocument[expando]];
     if (!data) {
       data = {};
       expanID++;
@@ -150,7 +152,7 @@ function showSlides(n) {
       return ownerDocument.createElement(nodeName);
     }
     data = data || getExpandoData(ownerDocument);
-    var node;
+    let node;
 
     if (data.cache[nodeName]) {
       node = data.cache[nodeName].cloneNode();
@@ -186,7 +188,7 @@ function showSlides(n) {
       return ownerDocument.createDocumentFragment();
     }
     data = data || getExpandoData(ownerDocument);
-    var clone = data.frag.cloneNode(),
+    let clone = data.frag.cloneNode(),
       i = 0,
       elems = getElements(),
       l = elems.length;
@@ -221,7 +223,7 @@ function showSlides(n) {
     ownerDocument.createDocumentFragment = Function(
       "h,f",
       "return function(){" +
-        "var n=f.cloneNode(),c=n.createElement;" +
+        "let n=f.cloneNode(),c=n.createElement;" +
         "h.shivMethods&&(" +
         // unroll the `createElement` calls
         getElements()
@@ -247,7 +249,7 @@ function showSlides(n) {
     if (!ownerDocument) {
       ownerDocument = document;
     }
-    var data = getExpandoData(ownerDocument);
+    let data = getExpandoData(ownerDocument);
 
     if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
       data.hasCSS = !!addStyleSheet(
@@ -275,7 +277,7 @@ function showSlides(n) {
    * // options can be changed before the script is included
    * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
    */
-  var html5 = {
+  let html5 = {
     /**
      * An array or space separated string of node names of the elements to shiv.
      * @memberOf html5
