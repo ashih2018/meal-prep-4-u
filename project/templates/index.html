@@ -10,30 +10,60 @@
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <h1><a href="#">Basic 81</a></h1>
-          <h2>Free HTML5 Website Template</h2>
+          <h1><a href="#">Meal Prep For You</a></h1>
+          <h2>
+            The best customizable meal prepping web application that is
+            customized towards both your diet as well as your budget!
+          </h2>
         </div>
         <div class="tab">
           <button class="tablinks" onclick="openCity(event, 'London')">
             Find Recipes
           </button>
           <button class="tablinks" onclick="openCity(event, 'Paris')">
-            Paris
+            View Pantry
           </button>
           <button class="tablinks" onclick="openCity(event, 'Tokyo')">
-            Tokyo
+            Profile
           </button>
         </div>
       </header>
+
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="images/mealprep.jpg" style="width:960px; height:540px" />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img
+            src="images/healthycooking.jpg"
+            style="width:960px; height:540px"
+          />
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="images/dietary.jpg" style="width:960px; height:540px" />
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+
+      <div style="text-align:center; margin: 1%">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
     </div>
     <!-- content -->
+
     <div class="wrapper row2">
       <div id="container" class="clear">
-        <section id="slider">
-          <a href="#"><img src="images/demo/960x360.gif" alt=""/></a>
-        </section>
-        <section id="shout">
-          <h1>Lorum ipsum dolor</h1>
+        <section id="shout" class="slidesText">
+          <h1>Importance of Meal Prep</h1>
           <p>
             Vestibulumaccumsan egestibulum eu justo convallis augue estas aenean
             elit intesque sed. Facilispede estibulum nulla orna nisl velit elit
@@ -41,8 +71,25 @@
             neque sed quis orci nulla laoremut vitae doloreet condimentumst.
           </p>
         </section>
+        <section id="shout" class="slidesText">
+          <h1>Healthy Cooking is Essential</h1>
+          <p>
+            fff
+          </p>
+        </section>
+        <section id="shout" class="slidesText">
+          <h1>Addressing Dietary Needs</h1>
+          <p>
+            333
+          </p>
+        </section>
       </div>
     </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+    </script>
 
     <div id="London" class="tabcontent">
       <h3>London</h3>

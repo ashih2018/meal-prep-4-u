@@ -1,5 +1,45 @@
 /*! HTML5 Shiv vpre3.6 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed */
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var slidesText = document.getElementsByClassName("slidesText");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n > slidesText.length) {
+    slidesTextIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+    slidesTextIndex = slidesText.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < slidesText.length; i++) {
+    slidesText[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  slidesText[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
 function openCity(evt, cityName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
