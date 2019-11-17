@@ -30,6 +30,15 @@ def pantry():
 def profile():
     return render_template('profile.html')
 
+@app.route('/pantrymethod', methods=['POST'])
+def get_pantry_data():
+    print('AAAAAAAGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG')
+    with open('pantry.json') as f:
+      data = json.load(f)
+    # Output: {'name': 'Bob', 'languages': ['English', 'Fench']}
+    print(data)
+    return json.dumps(data)
+
 
 @app.route('/postmethod', methods=['POST'])
 def get_post_javascript_data():
