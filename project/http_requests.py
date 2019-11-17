@@ -6,7 +6,7 @@ RECIPES_BULK = "https://api.spoonacular.com/recipes/informationBulk"
 RECIPES_FILE = "recipes.json"
 FULL_RECIPES_FILE = "full_recipes.json"
 
-API_KEY = "91c872bcb84c442f8599092ea7b1affb"
+API_KEY = ""
 
 
 def get_request(url, params, api_key):
@@ -54,10 +54,14 @@ def run():
 
     if not full_recipes_json:
         print("Sending server request...")
-        parameters = {"ids": recipe_ids_string}
-
+        parameters = {"ids": recipe_ids_string,
+                      "includeNutrition": "true"}
         full_recipes_json = get_request(RECIPES_BULK, parameters, API_KEY)
         write_file(FULL_RECIPES_FILE, full_recipes_json)
+
+    print(full_recipes_json)
+    full_recipes_list = json.loads(full_recipes_json)
+    print(full_recipes_list)
 
 
 if __name__ == '__main__':
