@@ -32,11 +32,8 @@ def profile():
 
 @app.route('/pantrymethod', methods=['POST'])
 def get_pantry_data():
-    print('AAAAAAAGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG')
     with open('pantry.json') as f:
       data = json.load(f)
-    # Output: {'name': 'Bob', 'languages': ['English', 'Fench']}
-    print(data)
     return json.dumps(data)
 
 
@@ -55,7 +52,6 @@ def get_post_javascript_data():
     print("finished")
     print(json.dumps(json_recipes))
     return json.dumps(json_recipes)
-    # return "Hello"
 
 
 if __name__ == '__main__':

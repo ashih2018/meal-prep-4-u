@@ -1,4 +1,3 @@
-onLoad();
 
 function addPantryItem() {
   let a = document.getElementById("include0");
