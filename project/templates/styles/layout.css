@@ -119,7 +119,7 @@ div.wrapper {
 
 .row1,
 .row1 a {
-  color: #979797;
+  color: #000000;
   background-color: #ffffff;
 }
 .row2 {
@@ -234,6 +234,11 @@ q:after {
   margin-bottom: 0;
   padding-bottom: 0;
   line-height: 1.8em;
+}
+
+.title {
+  font-size: 32px;
+  color: black !important;
 }
 
 /* Style the tab */
