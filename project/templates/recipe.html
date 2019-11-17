@@ -1,65 +1,106 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>Meal Prep For You</title>
+    <title>Basic 81</title>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="styles/layout.css" type="text/css" />
-    <script src="scripts/html5shiv.js"></script>
+    <link rel="stylesheet" href="styles/default.css" type="text/css" />
+    <script src="scripts/recipe.js"></script>
   </head>
   <body>
     <div class="wrapper row1">
       <header id="header" class="clear">
         <div id="hgroup">
-          <h1 class="title"><a href="#">Meal Prep For You</a></h1>
-          <h2>
-            The best customizable meal prepping web application that is
-            customized towards both your diet as well as your budget!
-          </h2>
+          <h1><a href="#">RECIPE SEARCH</a></h1>
         </div>
-        <div class="tab">
-          <button
-            class="tablinks"
-            onclick="location.href='recipe.html'"
-            type="button"
-          >
-            Find Recipes
-          </button>
-          <button
-            class="tablinks"
-            onclick="location.href='pantry.html'"
-            type="button"
-          >
-            View Pantry
-          </button>
-          <button
-            class="tablinks"
-            onclick="location.href='profile.html'"
-            type="button"
-          >
-            Profile
-          </button>
-        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="recipe.html">Recipe Search</a></li>
+            <li><a href="pantry.html">My Pantry</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </nav>
       </header>
     </div>
-
-    <script>
-      var slideIndex = 1;
-      showSlides(slideIndex);
-    </script>
-
-    <div id="London" class="tabcontent">
-      <h3>London</h3>
-      <p>London is the capital city of England.</p>
-    </div>
-
-    <div id="Paris" class="tabcontent">
-      <h3>Paris</h3>
-      <p>Paris is the capital of France.</p>
-    </div>
-
-    <div id="Tokyo" class="tabcontent">
-      <h3>Tokyo</h3>
-      <p>Tokyo is the capital of Japan.</p>
+    <!-- content -->
+    <div class="wrapper row2">
+      <div id="container" class="clear">
+        <section id="shout">
+          <h2>How It Works</h2>
+          <p>
+            Search for a recipe based on your dietary preferences that you entered in your profile as well 
+            as what types of food you are in the mood for today, which you can enter down below!
+          </p>
+        </section>
+        <!-- content body -->
+        <div id="content">
+          <!-- main content -->
+          <div id="query">
+            <form>
+              Search for recipe keyword:<br />
+              <input type="text" name="firstname" /><br />
+            </form>
+          </div>
+          <div id="include-ingredients">
+            <form>
+              Include Ingredient(s):<br />
+              <input type="text" name="firstname" /><br />
+            </form>
+          </div>
+          <button class="myButton" onclick="generateIncludeRow()">
+            Add Ingredient
+          </button>
+          <div id="exclude-ingredients">
+            <form>
+              Exclude Ingredient(s):<br />
+              <input type="text" name="firstname" /><br />
+            </form>
+          </div>
+          <button class="myButton" onclick="generateExcludeRow()">
+            Add Ingredient
+          </button>
+          <input
+            type="checkbox"
+            id="cuisine"
+            class="check-cuisine"
+            checked
+            onclick="checkCuisine()"
+          >
+          Cuisine Type </input>
+          <div id="cuisines">
+            <input type="checkbox" value="African"> African </input>
+            <input type="checkbox" value="American" > American</input>
+            <input type="checkbox" value="British" > British</input>
+            <input type="checkbox" value="Cajun" > Cajun</input>
+            <input type="checkbox" value="Caribbean" > Caribbean</input>
+            <input type="checkbox" value="Chinese" > Chinese</input>
+            <input type="checkbox" value="Eastern" > Eastern</input>
+            <input type="checkbox" value="European" > European</input>
+            <input type="checkbox" value="French" > French</input>
+            <input type="checkbox" value="German" > German</input>
+            <input type="checkbox" value="Greek" > Greek</input>
+            <input type="checkbox" value="Indian" > Indian</input>
+            <input type="checkbox" value="Irish" > Irish</input>
+            <input type="checkbox" value="Italian" > Italian</input>
+            <input type="checkbox" value="Japanese" > Japanese</input>
+            <input type="checkbox" value="Jewish" > Jewish</input>
+            <input type="checkbox" value="Korean" > Korean</input>
+            <input type="checkbox" value="Latin American" > Latin American</input>
+            <input type="checkbox" value="Mediterranean" > Mediterranean</input>
+            <input type="checkbox" value="Mexican" > Mexican</input>
+            <input type="checkbox" value="Middle Eastern" > Middle Eastern</input>
+            <input type="checkbox" value="Nordic" > Nordic</input>
+            <input type="checkbox" value="Southern" > Southern</input>
+            <input type="checkbox" value="Spanish" > Spanish</input>
+            <input type="checkbox" value="Thai" > Thai</input>
+            <input type="checkbox" value="Vietnamese" > Vietnamese</input>
+          </div>
+          <button class="myButton">
+            Find Recipes!
+          </button>
+        </div>
+        <!-- / content body -->
+      </div>
     </div>
   </body>
 </html>
