@@ -73,6 +73,44 @@ img {
   clear: right;
 }
 
+#header #hgroup {
+  float: left;
+}
+#header #hgroup h1,
+#header #hgroup h2 {
+  font-weight: normal;
+  text-transform: none;
+}
+#header #hgroup h1 {
+  font-size: 36px;
+}
+#header #hgroup h2 {
+  font-size: 13px;
+}
+
+#header nav {
+  display: block;
+  float: right;
+  margin: 20px 0 0 0;
+  padding: 0 0;
+}
+#header nav ul {
+}
+#header nav li {
+  display: inline;
+  margin-right: 25px;
+  text-transform: uppercase;
+}
+#header nav li.last {
+  margin-right: 0;
+}
+#header nav li a {
+}
+#header nav li a:hover {
+  color: #ff9900;
+  background-color: #ffffff;
+}
+
 /*----------------------------------------------HTML 5 Overrides-------------------------------------*/
 
 address,
@@ -151,7 +189,7 @@ div.wrapper {
 
 .row1,
 .row1 a {
-  color: #000000;
+  color: #979797;
   background-color: #ffffff;
 }
 .row2 {
@@ -223,6 +261,9 @@ q:after {
   content: " �";
   font-size: 26px;
   line-height: 0;
+}
+
+#header {
 }
 
 .one_third,

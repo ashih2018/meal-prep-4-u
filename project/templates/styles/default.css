@@ -94,6 +94,9 @@ code {
   width: 95%;
 }
 
+#cuisines > input {
+}
+
 img {
   margin: 0;
   padding: 0;
@@ -198,21 +201,6 @@ nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  font-weight: bold;
-  font-style: normal;
-  line-height: normal;
-  text-transform: uppercase;
 }
 
 address {
